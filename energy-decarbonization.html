@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>能源部門減碳行動</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+<style>
+:root{--bg:#F4F7F6;--surf:#fff;--ink:#0F2A33;--mut:#4A6670;--ac:#0E7C86;--am:#C98200;--ln:#CBDAD8;--hero:#0E2A3A;--herotx:#EAF4F3;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1A20;--surf:#12262D;--ink:#E4EFEE;--mut:#93AFB3;--ac:#4FC3CC;--am:#F2B63D;--ln:#24424A;--hero:#071217}}
+:root[data-theme="dark"]{--bg:#0B1A20;--surf:#12262D;--ink:#E4EFEE;--mut:#93AFB3;--ac:#4FC3CC;--am:#F2B63D;--ln:#24424A;--hero:#071217}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.75}
+.hero{background:var(--hero);color:var(--herotx);padding:72px 24px 56px}
+.wrap{max-width:1000px;margin:0 auto}
+.hero p{margin:0 0 8px;color:#9CC9CC}
+.hero h1{font-size:clamp(2.2rem,7vw,4.4rem);font-weight:900;line-height:1.15;margin:0 0 28px;letter-spacing:.02em}
+.hero .lead{max-width:34em;font-size:1.05rem;color:#C9DEDD}
+.chart{margin-top:40px;display:flex;align-items:flex-end;gap:clamp(12px,4vw,40px);height:220px;border-bottom:1px solid #3B6370}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.col b{font-size:1.3rem;color:#F2B63D}
+.col i{display:block;width:100%;max-width:90px;background:#4FC3CC;border-radius:4px 4px 0 0}
+.col span{font-size:.85rem;color:#9CC9CC;margin-top:6px;position:absolute;transform:translateY(100%)}
+.chart+.cap{margin:34px 0 0;font-size:.9rem;color:#9CC9CC}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--ln);z-index:5;overflow-x:auto;white-space:nowrap}
+nav .wrap{display:flex;gap:4px;padding:0 12px}
+nav a{padding:12px 12px;color:var(--mut);text-decoration:none;font-size:.92rem}
+nav a:hover,nav a:focus-visible{color:var(--ac);outline:none;text-decoration:underline}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+section{padding:56px 24px;border-bottom:1px solid var(--ln)}
+h2{font-size:clamp(1.5rem,4vw,2.1rem);margin:0 0 8px;font-weight:900}
+.sub{color:var(--mut);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.box{background:var(--surf);border:1px solid var(--ln);padding:20px;border-radius:6px}
+.box h3{margin:0 0 6px;font-size:1.05rem;color:var(--ac)}
+.box ul{margin:8px 0 0;padding-left:1.1em;color:var(--mut)}
+.eq{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-weight:700;margin-bottom:24px}
+.eq span{background:var(--surf);border:1px solid var(--ln);padding:8px 14px;border-radius:999px}
+.eq em{font-style:normal;color:var(--am)}
+.row{display:grid;grid-template-columns:72px 1fr 96px;gap:12px;align-items:center;margin:8px 0;font-size:.95rem}
+.row .t{height:14px;background:var(--ln);border-radius:3px;overflow:hidden}
+.row .t i{display:block;height:100%;background:var(--ac)}
+.row .v{text-align:right;font-weight:700}
+.mix{display:flex;gap:16px;height:260px;align-items:stretch}
+.mc{flex:1;display:flex;flex-direction:column;text-align:center;font-size:.85rem}
+.mc div{flex:1;display:flex;flex-direction:column;border-radius:4px;overflow:hidden}
+.mc div i{display:flex;align-items:center;justify-content:center;font-style:normal;color:#fff;min-height:0;font-size:.8rem}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;font-size:.88rem;color:var(--mut)}
+.legend s{display:inline-block;width:12px;height:12px;margin-right:6px;border-radius:2px;text-decoration:none;vertical-align:-1px}
+.flag{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.flag .box h3{font-size:1.2rem}
+.tag{display:inline-block;margin:4px 6px 0 0;padding:2px 10px;font-size:.82rem;border:1px solid var(--ln);border-radius:999px;color:var(--mut)}
+.big{font-size:2.4rem;font-weight:900;color:var(--am);line-height:1.2}
+.note{color:var(--mut);font-size:.88rem;margin-top:12px}
+footer{padding:48px 24px calc(56px + env(safe-area-inset-bottom,0px));color:var(--mut);font-size:.88rem}
+@media(max-width:560px){.row{grid-template-columns:56px 1fr 80px}.mix{gap:8px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<p>經濟部 · 國家氣候變遷對策委員會第 3 場次 · 114/01/23</p>
+<h1>能源部門減碳行動</h1>
+<div class="lead">在確保能源與電力穩定供應的前提下,以二次能源轉型同時達成能源安全自主、支持產業綠能需求,並創造新的經濟成長動能。</div>
+<div class="chart" id="ef" aria-label="電力排放係數:2023 年 0.490、2030 年 0.319、2032 年 0.294、2035 年 0.241 公斤 CO₂e/度"></div>
+<p class="cap">電力排放係數(公斤 CO₂e/度):2035 年較 2023 年降低 50.8%</p>
+</div></header>
+
+<nav><div class="wrap">
+<a href="#goal">轉型目標</a><a href="#plan">行動架構</a><a href="#mix">發電結構</a><a href="#flag">旗艦計畫</a><a href="#tech">前瞻技術</a><a href="#self">自用與電網</a><a href="#save">深度節能</a><a href="#end">結語</a>
+</div></nav>
+
+<section id="goal"><div class="wrap">
+<h2>能源轉型的多元目標</h2>
+<p class="sub">台灣能源高度依賴進口,再生能源潛力高,電網為獨立的集中式電廠架構。</p>
+<div class="eq"><span>能源轉型多元目標</span><em>=</em><span>穩定能源供應</span><em>+</em><span>能源自主安全</span><em>+</em><span>充足綠電與低碳電力服務</span><em>+</em><span>支持產業需求</span></div>
+<div class="grid">
+<div class="box"><h3>多元綠能與分散式新能源</h3><ul><li>太陽光電、離岸風電</li><li>前瞻綠能:地熱、生質能、小水力</li><li>無碳分散式新能源技術</li></ul></div>
+<div class="box"><h3>科技儲能與強韌電網</h3><ul><li>儲能系統、定置型燃料電池</li><li>加速電網韌性計畫</li></ul></div>
+<div class="box"><h3>過渡火力去碳化</h3><ul><li>低碳天然氣</li><li>碳捕捉利用與封存(CCUS)</li><li>混氫(氨)發電</li></ul></div>
+<div class="box"><h3>提供無碳燃料</h3><ul><li>氫能與合成燃料供應系統</li><li>永續航空燃油(SAF)供應系統</li></ul></div>
+<div class="box"><h3>創造綠色經濟</h3><ul><li>再生能源產業與技術輸出外銷</li><li>活絡國內能源市場,創造新能源服務產業</li></ul></div>
+</div></div></section>
+
+<section id="plan"><div class="wrap">
+<h2>整體減碳行動計畫</h2>
+<p class="sub">供給面開源,需求面節流。</p>
+<div class="grid">
+<div class="box"><h3>供給面:提供低/無碳能源</h3><p class="note" style="margin:0 0 8px">降低電力排放係數,新增減碳旗艦計畫(經濟部、環境部、國發會)</p><ul><li>無碳能源:風/光加速、地熱(第三支箭)、小水力(突破)</li><li>低碳技術:CCUS、氫能(含氨)供應、去碳燃氫、提高混氫比例</li><li>系統穩定:科技儲能、強化電網韌性</li></ul></div>
+<div class="box"><h3>需求面:節能是最好的能源</h3><p class="note" style="margin:0 0 8px">能源部門自用減碳措施,加上各部門減碳行動計畫(經濟部)</p><ul><li>能源部門自身:提升電廠、煉油廠、高爐的能源效率,採用低碳技術</li><li>協助其他部門:深度節能,提升能源使用效率</li></ul></div>
+</div></div></section>
+
+<section id="mix"><div class="wrap">
+<h2>發電結構與排放係數規劃</h2>
+<p class="sub">加大以氣換煤力度。電力需求年均成長率:2024–2030 年 2.1%、2024–2032 年 1.9%、2024–2035 年 1.8%。</p>
+<div class="mix" id="mixc"></div>
+<div class="legend"><span><s style="background:#7A8B8E"></s>燃煤</span><span><s style="background:#3E8FB0"></s>燃氣</span><span><s style="background:#2E9E6B"></s>再生能源</span></div>
+<p class="note">2024 年為預估值。2024 年另有核能約 4% 等其他電源,未顯示於圖中。電力排放係數目標:2030 年 0.319(較 2023 年降 34.9%)、2032 年 0.294(降 40.0%)、2035 年 0.241(降 50.8%)。</p>
+</div></section>
+
+<section id="flag"><div class="wrap">
+<h2>再生能源旗艦計畫</h2>
+<p class="sub">累計目標裝置量與執行重點。</p>
+<div class="flag">
+<div class="box"><h3>再生能源加速:太陽光電</h3><div id="pv"></div>
+<span class="tag">2035 年尚須 1.26 萬公頃土地</span><span class="tag">地面型目標 11.82GW</span>
+<ul><li>建立公對公協調機制(預計 2025 年)</li><li>農業篩選機制、通案性審認標準</li><li>小屋頂獎勵(2025.1)、新建物強制設置</li><li>單一窗口輔導、大型案件管控與地方溝通平台</li></ul></div>
+<div class="box"><h3>再生能源加速:離岸風電</h3><div id="wind"></div>
+<span class="tag">2031–2035 年尚需 1,075 km² 空間</span><span class="tag">2030 年前區塊開發需融資 1.08 兆元</span>
+<ul><li>與國防部、交通部、農業部研商設置範圍(2025.3)</li><li>碼頭租金、電網費用規費減免(2025.3)</li><li>與國發會、財政部、金管會討論提升本土銀行參貸(2025.6)</li></ul></div>
+<div class="box"><h3>再生能源第三支箭:地熱</h3><div class="big">200MW → 1.2GW</div><p class="note" style="margin:0 0 8px">2030 年設置目標大幅提高;2032 年 1.4GW、2035 年 1.7GW。</p>
+<ul><li>中油:8 個潛能區、24 套鑽機,至 2030 年概估鑽井 200 口</li><li>台電:4 個潛能區、10 套鑽機,至 2030 年概估鑽井 200 口</li><li>引進國外鑽井設備與國際專業團隊(2025.8)</li><li>協調原住民部落諮商(2025.6)、大屯山地熱發電(2025.12)</li></ul></div>
+<div class="box"><h3>再生能源突破:小水力</h3><div id="hydro"></div>
+<span class="tag">現況(2024.10):178MW</span>
+<ul><li>挑戰:土地取得、用水問題、環境影響評估</li><li>啟動單一服務窗口,訂定設置指引</li><li>檢討躉購費率與獎勵機制,建立公對公推動模式</li></ul></div>
+</div></div></section>
+
+<section id="tech"><div class="wrap">
+<h2>布局前瞻技術</h2>
+<p class="sub">以制度與研發環境優先,面對技術選擇與導入時程的不確定性。</p>
+<div class="grid">
+<div class="box"><h3>科技儲能(系統穩定)</h3><ul><li>電網端與發電端儲能設備推動</li><li>增訂「表後儲能」時間電價、研擬消防安全規範</li><li>增加燃料電池補助,優先推動資料中心、AI 與半導體產業</li></ul></div>
+<div class="box"><h3>去碳燃氫(低碳)</h3><ul><li>中研院:逐步放大天然氣去碳製氫規模</li><li>台電:建置約 5MW 混氫發電試驗場域</li><li>2028 年達成 5MW 發電測試系統、20% 混氫示範</li></ul></div>
+<div class="box"><h3>氫(氨)能供應鏈(國發會)</h3><ul><li>低碳氨進口先行,評估氫氣進口與自產技術</li><li>液氨儲槽、液氫基礎設施、加氫站</li><li>應用於工業爐、煉鋼、氫能車船與混氫/氨發電</li></ul></div>
+<div class="box"><h3>CCUS(環境部)</h3><ul><li>推動高效且低成本碳捕捉技術</li><li>建置碳源產業鏈與試驗場址</li><li>中油規劃 2029 年於林園石化廠建置 10 萬噸/套碳捕捉設備</li></ul></div>
+</div></div></section>
+
+<section id="self"><div class="wrap">
+<h2>自用減碳與基礎建設強化</h2>
+<div class="grid">
+<div class="box"><h3>煉油業(中油、台塑)</h3><ul><li>低碳燃料:燃油鍋爐改燃氣、氫能使用</li><li>提高能源效率:設備汰舊、導入 ESCO</li><li>廢熱與廢蒸氣回收,使用太陽光電與地熱</li></ul></div>
+<div class="box"><h3>電力業(台電、民營電廠、汽電共生廠)</h3><ul><li>汰舊發電機組,減少廠用電量</li><li>深度節能</li></ul></div>
+<div class="box"><h3>強化電網韌性</h3><ul><li>從集中式走向分散、強固、智慧化</li><li>挑戰:變電所用地、路權、執照許可、地方溝通</li></ul></div>
+<div class="box"><h3>永續航空燃油供給</h3><ul><li>短期進口:2024 年底完成相關認證程序</li><li>長期評估自產:共煉製程方案、純 SAF 方案</li><li>挑戰:須限制廢食用油出口</li></ul></div>
+</div></div></section>
+
+<section id="save"><div class="wrap">
+<h2>深度節能旗艦計畫</h2>
+<p class="sub">2024 年累計節電 48 億度/年,達成目標的 106.3%。</p>
+<div id="sv"></div>
+<div class="grid" style="margin-top:28px">
+<div class="box"><h3>2024 年成效</h3><ul><li>ESCO 輔導及家電補助:節電 11.3 億度</li><li>大用戶能源查核及輔導:節電 21.3 億度</li><li>設備效率基準管理:節電 7.5 億度</li><li>其他(建築、商業節能等):節電 8.1 億度</li></ul></div>
+<div class="box"><h3>後續作法</h3><ul><li>大用戶(&gt;1 萬瓩)節電目標提高至 1.5%</li><li>新期程家電補助(2025–2026 年 136 億元)</li><li>設備效率再提升:馬達 IE3 → IE4、冷氣機提升 5%</li><li>持續推動三階段產業導入 ESCO,並發展大型 ESCO</li></ul></div>
+</div></div></section>
+
+<section id="end"><div class="wrap">
+<h2>結語</h2>
+<div class="grid">
+<div class="box"><h3>多元目標</h3><p style="margin:0;color:var(--mut)">透過二次能源轉型,在穩定供應的前提下,提升能源安全自主、支持產業綠能需求並創造新成長動能。</p></div>
+<div class="box"><h3>跨部會合作</h3><p style="margin:0;color:var(--mut)">能源部門提供低/無碳電力與燃料,是各部門降碳的關鍵,推動過程需要跨部會合作以確保再生能源供給。</p></div>
+<div class="box"><h3>持續追蹤技術</h3><p style="margin:0;color:var(--mut)">氫能、新核能技術、無碳燃料、電動車/氫能車等仍在快速發展,需持續追蹤並評估台灣的選擇,以確保產業競爭力與能源穩定供應。</p></div>
+</div></div></section>
+
+<footer><div class="wrap">資料來源:經濟部〈能源部門減碳行動〉簡報,國家氣候變遷對策委員會第 3 場次議題 3-2(114/01/23)。</div></footer>
+
+<script>
+function rows(id,items,unit,max){var el=document.getElementById(id),m=max||Math.max.apply(null,items.map(function(x){return x[1]}));
+el.innerHTML=items.map(function(x){return '<div class="row"><span>'+x[0]+'</span><span class="t"><i style="width:'+(x[1]/m*100)+'%"></i></span><span class="v">'+x[2]+'</span></div>'}).join('')}
+rows('pv',[['2024.12',14.22,'14.22GW'],['2030',31.2,'31.2GW'],['2032',32.73,'32.73GW'],['2035',35.02,'35.02GW']]);
+rows('wind',[['2024.12',3,'3GW'],['2030',10.9,'10.9GW'],['2032',13.9,'13.9GW'],['2035',18.4,'18.4GW']]);
+rows('hydro',[['2030',195,'195MW'],['2032',234,'234MW'],['2035',237,'237MW']],'',250);
+rows('sv',[['2024',48,'48 億度'],['2027',206,'206 億度'],['2030',385,'385 億度'],['2032',460,'460 億度'],['2035',564,'564 億度']]);
+(function(){var d=[['2023',.490],['2030',.319],['2032',.294],['2035',.241]];
+document.getElementById('ef').innerHTML=d.map(function(x){return '<div class="col"><b>'+x[1].toFixed(3)+'</b><i style="height:'+(x[1]/.49*150)+'px"></i><span>'+x[0]+'</span></div>'}).join('');
+var m=[['2024',[39,43,11]],['2030',[20,49,30]],['2032',[14,54,31]],['2035',[9,54,36]]],c=['#7A8B8E','#3E8FB0','#2E9E6B'];
+document.getElementById('mixc').innerHTML=m.map(function(x){return '<div class="mc"><div>'+x[1].map(function(v,i){return '<i style="flex:'+v+';background:'+c[i]+'">'+v+'%</i>'}).join('')+'</div>'+x[0]+'</div>'}).join('')})();
+</script>
+</body>
+</html>
